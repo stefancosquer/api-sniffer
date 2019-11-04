@@ -1,0 +1,42 @@
+{
+  "name": "api-sniffer",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "node dist/server.js",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "test": "jest --forceExit --coverage --verbose",
+    "dev": "npm-run-all --parallel dev:watch dev:serve",
+    "dev:serve": "nodemon \"./dist/server.js\" --watch \"./dist/server.js\"",
+    "dev:watch": "webpack --watch --mode development"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0",
+    "prismjs": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.17.1",
+    "@types/express": "^4.16.1",
+    "@types/express-ws": "^3.0.0",
+    "@types/node": "^11.9.5",
+    "@types/prismjs": "^1.16.0",
+    "copy-webpack-plugin": "^5.0.1",
+    "lit-element": "^2.0.1",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^24.0.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-livereload-plugin": "^2.2.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "author": "Stefan Cosquer",
+  "license": "MIT"
+}
