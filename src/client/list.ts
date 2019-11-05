@@ -133,6 +133,8 @@ class ListComponent extends LitElement {
   @property()
   private connected: boolean;
 
+  private offset = new Date().getTimezoneOffset() * 60000;
+
   constructor() {
     super();
     window.addEventListener("data", (event: CustomEvent<Exchange[]>) => {
@@ -162,7 +164,7 @@ class ListComponent extends LitElement {
   }
 
   public getRequestTime(exchange: Exchange) {
-    return new Date(exchange.request.time).toISOString().substr(11, 5);
+    return new Date(exchange.request.time - this.offset).toISOString().substr(11, 5);
   }
 
   public render() {

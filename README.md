@@ -54,6 +54,9 @@ Open http://localhost:8080 to view the app in the browser.
 
 The exchanges list will be refreshed in realtime as API calls go through API Sniffer. 
 
+![Screenshot](https://user-images.githubusercontent.com/9282806/68213786-7d34a180-ffdc-11e9-8504-d829d4e6cdc5.png)
+
+
 ## Development
 
 To run the development server with live reloading
