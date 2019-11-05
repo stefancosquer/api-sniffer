@@ -6,7 +6,7 @@ import { Exchange } from "../model/exchange";
 
 const wss = expressWs(express());
 const app = wss.app;
-const port: number = 8080;
+const port = process.env.PORT || 8080;
 
 // Body parsing
 
