@@ -1,4 +1,4 @@
-# API Sniffer
+# API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
 
 API Sniffer is a simple tool to trace API calls between 2 backends.
 
