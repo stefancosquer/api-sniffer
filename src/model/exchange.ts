@@ -1,4 +1,5 @@
 export interface Exchange {
+  id: string;
   request: {
     time: number;
     method: string;

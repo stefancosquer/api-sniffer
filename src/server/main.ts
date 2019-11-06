@@ -2,6 +2,7 @@ import axios, { AxiosError, Method } from "axios";
 import * as bodyParser from "body-parser";
 import express, { Request, Response } from "express";
 import expressWs from "express-ws";
+import { performance } from "perf_hooks";
 import { Exchange } from "../model/exchange";
 
 const wss = expressWs(express());
@@ -28,6 +29,7 @@ const refresh = () => {
 
 app.all("/proxy/*", (req: Request, res: Response) => {
   const exchange: Exchange = {
+    id: performance.now().toString(16).replace(".", ""),
     request: {
       time: Date.now(),
       method: req.method.toLowerCase(),

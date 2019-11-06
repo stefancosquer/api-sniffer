@@ -1,12 +1,6 @@
 import { css, customElement, html, LitElement, property } from "lit-element";
 import { Exchange } from "../model/exchange";
 
-declare module "../model/exchange" {
-  interface Exchange {
-    selected?: boolean;
-  }
-}
-
 @customElement("app-list")
 class ListComponent extends LitElement {
 
@@ -133,6 +127,8 @@ class ListComponent extends LitElement {
   @property()
   private connected: boolean;
 
+  private selected: string;
+
   private offset = new Date().getTimezoneOffset() * 60000;
 
   constructor() {
@@ -150,8 +146,7 @@ class ListComponent extends LitElement {
   }
 
   public onSelect(exchange: Exchange) {
-    this.exchanges.forEach((e) => e.selected = false);
-    exchange.selected = true;
+    this.selected = exchange.id;
     this.dispatchEvent(new CustomEvent( "selected", { bubbles: true, composed: true, detail: exchange } ));
     this.requestUpdate();
   }
@@ -171,7 +166,7 @@ class ListComponent extends LitElement {
     return html`
       <div class="header ${this.connected ? "connected" : ""}">API Sniffer</div>
       ${this.exchanges.map((exchange) => html`
-        <div @click=${() => this.onSelect(exchange)} class="exchange${exchange.response ? " done" : " pending"}${exchange.selected ? " selected" : ""}" >
+        <div @click=${() => this.onSelect(exchange)} class="exchange${exchange.response ? " done" : " pending"}${exchange.id === this.selected ? " selected" : ""}" >
           <div class="request">
             <app-method class="method" name="${exchange.request.method}"></app-method>
             <span class="url">${exchange.request.url}</span>
