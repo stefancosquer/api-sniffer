@@ -1,5 +1,9 @@
 # API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
 
+<p align="center">
+  <img width="120" src="https://user-images.githubusercontent.com/9282806/68394458-2a8aef00-016e-11ea-8cd2-8471cba57f1f.png" alt="API Sniffer Logo" />
+</p>
+
 API Sniffer is a simple tool to trace API calls between 2 backends.
 
 All you need is to deploy API Sniffer and route all API calls you want to trace through it.
