@@ -1,8 +1,8 @@
-# API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
-
 <p align="center">
   <img width="120" src="https://user-images.githubusercontent.com/9282806/68394587-69b94000-016e-11ea-918e-735a2119a093.png" alt="API Sniffer Logo" />
 </p>
+
+# API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
 
 API Sniffer is a simple tool to trace API calls between 2 backends.
 
