@@ -5,7 +5,7 @@ import expressWs from "express-ws";
 import { performance } from "perf_hooks";
 import { Exchange } from "../model/exchange";
 
-export default class App {
+export class App {
 
   public wss;
   public app;

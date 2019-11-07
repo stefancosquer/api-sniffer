@@ -1,5 +1,5 @@
 import axios from "axios";
-import App from "./app";
+import { App } from "./app";
 
 jest.mock("axios");
 

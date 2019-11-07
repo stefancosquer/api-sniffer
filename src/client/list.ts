@@ -2,7 +2,7 @@ import { css, customElement, html, LitElement, property } from "lit-element";
 import { Exchange } from "../model/exchange";
 
 @customElement("app-list")
-class ListComponent extends LitElement {
+export class ListComponent extends LitElement {
 
   public static styles = css`
     :host {
@@ -121,15 +121,15 @@ class ListComponent extends LitElement {
     }
   `;
 
+  public selected: string;
+
+  public offset = new Date().getTimezoneOffset() * 60000;
+
   @property()
   private exchanges: Exchange[] = [];
 
   @property()
   private connected: boolean;
-
-  private selected: string;
-
-  private offset = new Date().getTimezoneOffset() * 60000;
 
   constructor() {
     super();
@@ -141,10 +141,6 @@ class ListComponent extends LitElement {
     });
   }
 
-  public connectedCallback() {
-    super.connectedCallback();
-  }
-
   public onSelect(exchange: Exchange) {
     this.selected = exchange.id;
     this.dispatchEvent(new CustomEvent( "selected", { bubbles: true, composed: true, detail: exchange } ));
@@ -152,10 +148,7 @@ class ListComponent extends LitElement {
   }
 
   public getIndicator(exchange: Exchange) {
-    if (exchange.response) {
-      return exchange.response.status < 400 ? "ok" : "ko";
-    }
-    return "";
+    return (exchange.response && exchange.response.status) < 400 ? "ok" : "ko";
   }
 
   public getRequestTime(exchange: Exchange) {
