@@ -27,7 +27,7 @@ module.exports = function(env, argv) {
     {
       name: 'client',
       entry: {
-        client: glob.sync("./src/client/**/*.ts")
+        client: glob.sync("./src/client/**/!(*.spec).ts")
       },
       module: {
         rules: [{test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/}]
