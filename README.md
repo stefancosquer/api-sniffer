@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="120" src="https://user-images.githubusercontent.com/9282806/68394587-69b94000-016e-11ea-918e-735a2119a093.png" alt="API Sniffer Logo" />
+  <img width="120" src="https://user-images.githubusercontent.com/9282806/68468334-1a2f4e80-0218-11ea-941e-e6075adb2587.png" alt="API Sniffer Logo" />
 </p>
 
 # API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
