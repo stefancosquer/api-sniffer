@@ -26,6 +26,10 @@ $ npm run start
 $ docker build -t api-sniffer .
 $ docker run -p 8080:8080 -ti --rm api-sniffer
 ```
+Or with Docker Compose
+```bash
+$ docker-compose up
+```
 
 ### App Engine
 
