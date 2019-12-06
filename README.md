@@ -2,7 +2,7 @@
   <img width="120" src="https://user-images.githubusercontent.com/9282806/68468334-1a2f4e80-0218-11ea-941e-e6075adb2587.png" alt="API Sniffer Logo" />
 </p>
 
-# API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg)
+# API Sniffer ![Badge](https://github.com/stefancosquer/api-sniffer/workflows/build/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=stefancosquer_api-sniffer&metric=alert_status)](https://sonarcloud.io/dashboard?id=stefancosquer_api-sniffer)
 
 API Sniffer is a simple tool to trace API calls between 2 backends.
 
