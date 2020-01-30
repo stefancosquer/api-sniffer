@@ -10,8 +10,8 @@ describe("List", () => {
     const comp = new ListComponent();
     const indicator = comp.getIndicator({
       id: "",
-      request: { time: 0, url: "", method: "", data: "", headers: [] },
-      response: { time: 0, status: 200, text: "", data: "", headers: [] },
+      request: { time: 0, url: "", method: "", data: "", headers: {} },
+      response: { time: 0, status: 200, text: "", data: "", headers: {} },
     });
     expect(indicator).toBe("ok");
   });
@@ -20,8 +20,8 @@ describe("List", () => {
     const comp = new ListComponent();
     const indicator = comp.getIndicator({
       id: "",
-      request: { time: 0, url: "", method: "", data: "", headers: [] },
-      response: { time: 0, status: 404, text: "", data: "", headers: [] },
+      request: { time: 0, url: "", method: "", data: "", headers: {} },
+      response: { time: 0, status: 404, text: "", data: "", headers: {} },
     });
     expect(indicator).toBe("ko");
   });
@@ -30,8 +30,8 @@ describe("List", () => {
     const comp = new ListComponent();
     comp.onSelect({
       id: "1234",
-      request: { time: 0, url: "", method: "", data: "", headers: [] },
-      response: { time: 0, status: 200, text: "", data: "", headers: [] },
+      request: { time: 0, url: "", method: "", data: "", headers: {} },
+      response: { time: 0, status: 200, text: "", data: "", headers: {} },
     });
     expect((comp.dispatchEvent as jest.Mock).mock.calls.length).toBe(1);
     expect(comp.selected).toBe("1234");
@@ -42,8 +42,8 @@ describe("List", () => {
     comp.offset = -60 * 60000;
     const time = comp.getRequestTime({
       id: "1234",
-      request: { time: 0, url: "", method: "", data: "", headers: [] },
-      response: { time: 0, status: 200, text: "", data: "", headers: [] },
+      request: { time: 0, url: "", method: "", data: "", headers: {} },
+      response: { time: 0, status: 200, text: "", data: "", headers: {} },
     });
     expect(time).toBe("01:00");
   });
