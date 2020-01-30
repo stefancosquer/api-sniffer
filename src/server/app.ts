@@ -67,6 +67,7 @@ export class App {
         data: (reason.response && reason.response.data) || null,
       };
     }).finally(() => {
+      delete exchange.response.headers["transfer-encoding"];
       res.status(exchange.response.status).set(exchange.response.headers).send(exchange.response.data);
       this.refresh();
     });
