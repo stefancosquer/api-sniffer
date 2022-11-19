@@ -35,7 +35,7 @@
     "tslint": "^5.13.0",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3",
+    "webpack-cli": "^3.3.12",
     "webpack-livereload-plugin": "^2.2.0",
     "webpack-node-externals": "^1.7.2"
   },
